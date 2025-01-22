@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <style>
+       body {
+            background-color: #A3D5E5; /* Color celeste */
+            color: white; /* Color de texto blanco por defecto */
+            margin: 0; /* Eliminar márgenes por defecto del body */
+        }
+        .card {
+    background-color: #2D3748; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno reducido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.2s; /* Efecto de transición */
+    flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
+    margin: 30px; /* Espaciado entre las tarjetas */
+    max-width: 500px; /* Tamaño máximo de las tarjetas */
+}
+
+/* Media query para pantallas más pequeñas (como móviles) */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
+        
+        .card img {
+            max-width: 100%; /* Imagen responsive */
+            border-radius: 8px; /* Bordes redondeados de la imagen */
+        }
+        .card-container {
+            display: flex; /* Utiliza flexbox para la disposición */
+            flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente línea */
+            justify-content: center; /* Centra las tarjetas en el contenedor */
+        }
+        h1 {
+            color: black; /* Cambiar el color del encabezado a negro */
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+
+    <main class="flex min-h-screen flex-col items-center">
+        <h1 class="text-4xl font-bold text-center my-6">
+            CATÁLOGO DE PRODUCTOS
+        </h1>
+    
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/polo.jpeg" alt="Polo de programación" /><br>
+                <h2 class="text-xl font-semibold text-center">Polo Informático</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 60 soles <br></strong></p>
+                <p class="text-gray-300"><strong>SOLO VÁLIDO PARA PERÚ 🇵🇪<br></strong></p>
+                <p class="text-gray-300"><strong>En el precio no se incluye el envío<br></strong></p>
+                <br>
+                <p class="text-gray-300">Este polo de programación es perfecto para mostrar tu pasión por la tecnología y la programación. Confeccionado en algodón suave y transpirable, te mantendrá cómodo mientras trabajas en tus proyectos o asistes a eventos de tecnología.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://wa.me/51976783049?text=Hola%20deseo%20comprar%20el%20Polo%20Informático" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar Compra
+                    </a>
+                </div><br>
+            </div>
+            
+            <div class="card">
+                <img src="/img/gorra.jpeg" alt="Gorro Informático" /><br>
+                <h2 class="text-xl font-semibold text-center">Gorro Informático</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 30 soles<br></strong></p>
+                <p class="text-gray-300"><strong>SOLO VÁLIDO PARA PERÚ 🇵🇪<br></strong></p>
+                <p class="text-gray-300"><strong>En el precio no se incluye el envío<br></strong></p>
+                <br>
+                <p class="text-gray-300">Este gorro informático es el complemento perfecto para cualquier amante de la tecnología. Hecho de materiales de alta calidad, es cómodo y ligero, ideal para mantenerte abrigado mientras trabajas en tus proyectos o asistes a eventos de programación. ¡Exprésate con estilo!</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://wa.me/51976783049?text=Hola%20deseo%20comprar%20el%20Gorro%20Informático" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar Compra
+                    </a>
+                </div><br>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/taza.jpeg" alt="Taza Informática" /><br>
+                <h2 class="text-xl font-semibold text-center">Taza Informática</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 15 soles<br></strong></p>
+                <p class="text-gray-300"><strong>SOLO VÁLIDO PARA PERÚ 🇵🇪<br></strong></p>
+                <p class="text-gray-300"><strong>En el precio no se incluye el envío<br></strong></p>
+                <br>
+                <p class="text-gray-300">Disfruta de tu bebida favorita en esta taza informática, diseñada especialmente para los apasionados de la tecnología. Hecha de cerámica de alta calidad, es ideal para el café, té o cualquier bebida caliente que te acompañe mientras trabajas o estudias. ¡Haz que cada sorbo sea una experiencia única!</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://wa.me/51976783049?text=Hola%20deseo%20comprar%20la%20Taza%20Informática" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar Compra
+                    </a>
+                </div><br>
+            </div>
+            
+            <div class="card">
+                <img src="/img/Caja.jpeg" alt="La Caja Informática" /><br>
+                <h2 class="text-xl font-semibold text-center">LA CAJA INFORMÁTICA</h2><br>
+                <p class="text-gray-300"><strong>SOLO VÁLIDO PARA PERÚ 🇵🇪<br></strong></p>
+                <p class="text-gray-300"><strong>En el precio se incluye el envío<br></strong></p>
+                <p class="text-gray-300"><strong>PRECIO: 100 soles </strong></p><br>
+                <p class="text-gray-300">La Caja Informática es el paquete perfecto para los amantes de la tecnología. Incluye un Polo de Programación, un Gorro Informático y una Taza Informática, todos diseñados para ofrecer estilo y comodidad mientras muestras tu pasión por el mundo digital. Ideal como regalo o para disfrutar de un conjunto que resalta tu personalidad techie.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://wa.me/51976783049?text=Hola%20deseo%20comprar%20la%20Caja%20Informática" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Más información
+                    </a>
+                </div><br>
+            </div>
+        </div>
+        
+            
+            
+            
+        </div>
+       
+    </main><br><br>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

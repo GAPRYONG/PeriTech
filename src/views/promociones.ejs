@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <style>
+       body {
+            background-color: #A3D5E5; /* Color celeste */
+            color: white; /* Color de texto blanco por defecto */
+            margin: 0; /* Eliminar márgenes por defecto del body */
+        }
+        .card {
+    background-color: #2D3748; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno reducido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.2s; /* Efecto de transición */
+    flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
+    margin: 30px; /* Espaciado entre las tarjetas */
+    max-width: 500px; /* Tamaño máximo de las tarjetas */
+}
+
+/* Media query para pantallas más pequeñas (como móviles) */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
+        
+        .card img {
+            max-width: 100%; /* Imagen responsive */
+            border-radius: 8px; /* Bordes redondeados de la imagen */
+        }
+        .card-container {
+            display: flex; /* Utiliza flexbox para la disposición */
+            flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente línea */
+            justify-content: center; /* Centra las tarjetas en el contenedor */
+        }
+        h1 {
+            color: black; /* Cambiar el color del encabezado a negro */
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+
+    <main class="flex min-h-screen flex-col items-center">
+        <h1 class="text-4xl font-bold text-center my-6">
+            PROMOCIONES
+        </h1>
+    
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/1.jpg" alt="Curso de JavaScript" /><br>
+                <h2 class="text-xl font-semibold text-center">DÚO DINÁMICO</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 220 soles<br>Duración: 2 meses (Noviembre y Diciembre)</strong></p>
+                
+                <br>
+                <p class="text-gray-300">¡Potencia tu aprendizaje con nuestro **DÚO DINÁMICO**! Escoge dos cursos de nuestra oferta y combina habilidades esenciales en programación y desarrollo web. Ideal para quienes buscan mejorar su perfil profesional o iniciar su carrera en tecnología.</p>
+                
+                <p class="text-gray-300">Al inscribirte, disfrutarás de:</p>
+                <ul class="text-gray-300 list-disc ml-5">
+                    <li>Material de estudio actualizado y recursos adicionales.</li>
+                    <li>Clases prácticas y proyectos para aplicar lo aprendido.</li>
+                    <li>Soporte continuo de nuestros instructores expertos.</li>
+                </ul>
+            
+                <p class="text-gray-300">¡Escoge el dúo que mejor se adapte a tus necesidades y aprovecha esta oportunidad única!</p>
+                
+                <div class="flex justify-center mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=51976783049&text=Hola%20deseo%20comprar%20el%20producto%20D%C3%9AO%20DIN%C3%81MICO" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar compra
+                    </a>
+                </div><br>
+            </div>
+            
+            <div class="card">
+                <img src="/img/2.jpg" alt="Curso de Python" /><br>
+                <h2 class="text-xl font-semibold text-center">TRES EN UNO</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 330 soles<br>Duración: 2 meses (Noviembre y Diciembre)</strong></p>
+                
+                <br>
+                <p class="text-gray-300">¡Potencia tu aprendizaje con nuestro **TRES EN UNO**! Escoge tres cursos de nuestra oferta y combina habilidades esenciales en programación, desarrollo web y análisis de datos. Esta opción es ideal para quienes buscan mejorar su perfil profesional y dar un salto en su carrera en tecnología.</p>
+                
+                <p class="text-gray-300">Al inscribirte, disfrutarás de:</p>
+                
+                <p class="text-gray-300">No pierdas la oportunidad de transformar tu futuro. ¡Inscríbete en el **TRES EN UNO** y prepárate para enfrentar los retos del mercado laboral!</p>
+            
+                <div class="flex justify-center mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=51976783049&text=Hola%20deseo%20comprar%20el%20producto%20TRES%20EN%20UNO" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar compra
+                    </a>
+                </div><br>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/3.jpg" alt="Curso de Java" /><br>
+                <h2 class="text-xl font-semibold text-center">CUARTETO DE ÉXITO</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 400 soles<br>Duración: 2 meses (Noviembre y Diciembre)</strong></p><br>
+                <p class="text-gray-300">¡Aprovecha la oportunidad de fortalecer tu carrera con nuestro **CUARTETO DE ÉXITO**! Escoge cuatro cursos de nuestra oferta y amplía tus habilidades en programación, desarrollo web, análisis de datos y más. Esta opción es perfecta para aquellos que buscan un perfil profesional completo y competitivo en el mercado laboral.</p>
+                
+                <p class="text-gray-300">No dejes pasar esta oportunidad de avanzar en tu formación. ¡Únete al **CUARTETO DE ÉXITO** y prepárate para destacar en el mundo de la tecnología!</p>
+            
+                <div class="flex justify-center mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=51976783049&text=Hola%20deseo%20comprar%20el%20producto%20CUARTETO%20DE%20%C3%89XITO" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar Compra
+                    </a>
+                </div><br>
+            </div>
+            
+            <div class="card">
+                <img src="/img/4.jpg" alt="Curso de Desarrollo de Aplicaciones Móviles" /><br>
+                <h2 class="text-xl font-semibold text-center">COMBO COMPLETO</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 450 soles<br>Duración: 2 meses (Noviembre y Diciembre)</strong></p><br>
+                
+                <p class="text-gray-300">¡No te pierdas nuestro **COMBO COMPLETO**! Accede a cinco cursos que abarcan todo lo que ofrecemos, desde programación y desarrollo web hasta análisis de datos y desarrollo de aplicaciones móviles con React Native y Expo.</p>
+                
+                <p class="text-gray-300">¡No dejes pasar esta oportunidad de transformarte en un profesional completo en el mundo de la tecnología! Inscríbete en el **COMBO COMPLETO** y comienza tu camino hacia el éxito.</p>
+            
+                <div class="flex justify-center mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=51976783049&text=Hola%20deseo%20comprar%20el%20producto%20COMBO%20COMPLETO" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Solicitar compra
+                    </a>
+                </div><br>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/5.jpg" alt="Curso de React" /><br>
+                <h2 class="text-xl font-semibold text-center">MEGAPACK</h2><br>
+                <p class="text-gray-300"><strong>PRECIO: 180 soles<br>Duración: 2 meses (Noviembre y Diciembre)</strong></p><br>
+                <p class="text-gray-300">¡Aprovecha nuestro exclusivo **MEGAPACK**! Inscríbete en uno de nuestros cursos de programación y, como bono especial, recibirás una **CAJA INFORMÁTICA** que incluye un polo de programación, una gorra y una taza.</p>
+                <p class="text-gray-300">Esta es la oportunidad perfecta para impulsar tu carrera en tecnología mientras disfrutas de un increíble kit de aprendizaje. ¡No te lo pierdas!</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=51976783049&text=Hola%20deseo%20comprar%20el%20producto%20MEGAPACK" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">
+                        Más información
+                    </a>
+                </div><br>
+            </div>
+        </div>
+        
+        
+    </main><br><br>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

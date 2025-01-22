@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+
+  <style>
+    body {
+      background-color: #a3d5e5;
+      /* Color celeste */
+      color: white;
+      /* Color de texto blanco por defecto */
+      margin: 0;
+      /* Eliminar márgenes por defecto del body */
+    }
+
+    .card {
+      background-color: #2d3748;
+      /* Color de fondo de la tarjeta */
+      border-radius: 8px;
+      /* Bordes redondeados */
+      padding: 10px;
+      /* Espaciado interno reducido */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Sombra */
+      transition: transform 0.2s;
+      /* Efecto de transición */
+      flex: 1 1 calc(25% - 20px);
+      /* Cuatro tarjetas por fila */
+      margin: 30px;
+      /* Espaciado entre las tarjetas */
+      max-width: 500px;
+      /* Tamaño máximo de las tarjetas */
+    }
+
+    /* Media query para pantallas más pequeñas (como móviles) */
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 calc(50% - 20px);
+        /* Dos tarjetas por fila */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        flex: 1 1 100%;
+        /* Una tarjeta por fila en pantallas muy pequeñas */
+      }
+    }
+
+    .card img {
+      max-width: 100%;
+      /* Imagen responsive */
+      border-radius: 8px;
+      /* Bordes redondeados de la imagen */
+    }
+
+    .card-container {
+      display: flex;
+      /* Utiliza flexbox para la disposición */
+      flex-wrap: wrap;
+      /* Permite que las tarjetas se muevan a la siguiente línea */
+      justify-content: center;
+      /* Centra las tarjetas en el contenedor */
+    }
+
+    h1 {
+      color: black;
+      /* Cambiar el color del encabezado a negro */
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('partials/navigation') %>
+
+    <main class="flex min-h-screen flex-col items-center">
+      <h1 class="text-4xl font-bold text-center my-6">BOT</h1>
+      <iframe allow="microphone;" width="350" height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/7a84fa28-b203-4b7b-a5ec-5ec1e412ef2e">
+      </iframe>
+    </main>
+    <br /><br />
+
+    <%- include('partials/footer') %>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+    <%- include('partials/navigation') %>
+
+        <div class="bg-gradient-to-r from-black via-gray-800 to-gray-600">
+            <section id="hero" class="hero-section">
+                <div
+                    class="container flex flex-col-reverse items-center px-6 mx-auto md:flex-row space-y-5 md:space-y-0">
+                    <div class="flex flex-col mb-16 md:w-1/2">
+                        <h1 class="text-white text-4xl md:text-6xl font-bold text-center md:text-left leading-tight">
+                            VENTA DE PERIFERICOS GAMING
+                        </h1>
+                        <p class="text-center text-lg md:text-2xl text-white leading-snug md:text-left mt-4 md:mt-0">
+                            Eleva tu experiencia gamer con los periféricos <br class="hidden md:block"> más avanzados y
+                            actualizados
+                        </p>
+                    </div>
+                    <div class="flex justify-center w-full md:w-1/2">
+                        <img src="/img/imagen01.png" alt="Logo" class="object-contain w-4/5 md:w-3/4 lg:w-full h-auto"
+                            width="800" height="800">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <main class="flex flex-col items-center min-h-screen text-black">
+            <div class="courses-section min-h-[400px] flex flex-col items-center p-3 mt-6 mb-6">
+                <h2 class="text-2xl font-bold p-1 mx-auto">TOP PERIFERICOS MAS VENDIDOS</h2>
+                <label class="p-2 mx-auto">Las marcas más top en periféricos gaming, solo lo mejor para tu experiencia
+                    de juego.</label>
+                <hr class="w-1/4 mx-auto border-b-2 border-gray-600 mt-2 mb-2" />
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Cursos Establecidos Directamente en el HTML -->
+                    <div class="course-card flex flex-col items-center p-3 gap-1">
+                        <h3 class="text-2xl font-bold p-1 mx-auto">Logitech</h3>
+                        <img src="/img/mouse.png" alt="Curso de Programación Web" class="course-image" width="300"
+                            height="300">
+                            <div class="text-2xl font-bold p-1 mx-auto">Logitech G502</div>
+                    </div>
+                    <div class="course-card flex flex-col items-center p-3 gap-1">
+                        <h3 class="text-2xl font-bold p-1 mx-auto">Razer</h3>
+                        <img src="/img/razer.png" alt="Curso de JavaScript" class="course-image" width="300"
+                            height="300">
+                                <div class="text-2xl font-bold p-1 mx-auto">Razer Viper Ultimate</div>
+                    </div>
+                    <div class="course-card flex flex-col items-center p-3 gap-1">
+                        <h3 class="text-2xl font-bold p-1 mx-auto">Redragon</h3>
+                        <img src="/img/teclado.png" alt="Curso de Python" class="course-image" width="300" height="300">
+                            <div class="text-2xl font-bold p-1 mx-auto">Redragon K552</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-section bg-blue-100 py-24 sm:py-32 rounded-xl">
+                <div class="mx-auto max-w-7xl grid gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">CONOCE A NUESTRO EQUIPO
+                        </h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-600">Conoce a las personas que forman parte de esta
+                            gran familia.</p>
+                    </div>
+                    <ul role="list"
+                        class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2 justify-between">
+                        <li class="team-member flex flex-row">
+                            <div class="flex items-center gap-x-6">
+                                <img src="/img/leo.jpg" alt="Foto de perfil de Leonardo Palomino" class="rounded-full"
+                                    width="128" height="128">
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leonardo
+                                        Palomino</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-600">Founder / CEO</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team-member flex flex-row">
+                            <div class="flex items-center gap-x-6">
+                                <img src="/img/Lucas.jpeg" alt="Foto de perfil de Lucas" class="rounded-full"
+                                    width="128" height="128">
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Lucas
+                                        Espinoza</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-600">Programador Full Stack
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team-member flex flex-row">
+                            <div class="flex items-center gap-x-6">
+                                <img src="/img/yasser.jpeg" alt="Foto de perfil de Lucas" class="rounded-full"
+                                    width="128" height="128">
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Yasser
+                                        Ávalos</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-600">Programar Backend</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+        </main>
+
+        <div id="mostrarPeliculas">
+            <!-- Aquí se mostrarán las películas dinámicamente -->
+        </div>
+
+
+
+
+</body>
+<%- include('partials/footer') %>
+
+</html>
